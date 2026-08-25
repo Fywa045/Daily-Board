@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+#app {
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+.header-bar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #000;
+}
+.header-bar h1 {
+    margin: 0;
+    font-size: 32px;
+}
+.top-bar {
+    width: 100%;
+    padding: 15px 5%;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#sDIV {
+    width: 42%;
+}
+#sDIV input {
+    width: 100%;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    margin: 5px;
+}
+#DarkDIV {
+    position: absolute;
+    right: 5%;
+}
+#changeMode {
+    width: 105px;
+    height: 40px;
+    margin: 5px;
+    border: 4px solid #000;
+    border-radius: 12px;
+    background: white;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.widget-row {
+    width: 80%;
+    margin: 25px auto 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+}
+.main-row {
+    width: 82%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+}
+.dashboard-card {
+    border: 5px solid #000;
+    border-radius: 40px;
+    background: white;
+    overflow: hidden;
+}
+.widget-card {
+    min-height: 135px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.widget-card h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+.widget-card p {
+    margin: 4px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+#con-cuaca {
+    margin: 5px;
+    border: 3px solid #000;
+    border-radius: 40px;
+    background: white;
+    overflow: hidden;
+}
+#tugasSection {
+    min-height: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#tugasSection h2,
+#catatanSection h2 {
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: 30px;
+}
+.tugas-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.tugas-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.tugas-button button {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tugas-controls input {
+    flex: 1;
+    min-width: 150px;
+    height: 38px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.tugas-controls button {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-city {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.input-city {
+    flex: 1;
+    min-width: 150px;
+    height: 38px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 5px;
+}
+.refresh {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background: white;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#articleHTML {
+    flex: 1;
+    overflow-y: auto;
+}
+#articleHTML ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list-tugas {
+    position: relative;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-hapus {
+    position: absolute;
+    right: 10px;
+    margin-right: 5px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+}
+.btn-edit-tugas {
+    position: absolute;
+    right: 110px;
+    margin-right: 5px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+}
+#catatanSection {
+    min-height: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#catatanSection #noteInput {
+    width: 100%;
+    min-height: 80px;
+    resize: vertical;
+    border: 3px solid #000;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: inherit;
+}
+.note-button {
+    margin-top: 8px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    background: white;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cttItem {
+    margin-top: 10px;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 10px;
+}
+.cttItem p {
+    margin: 0 0 5px;
+}
+.cttItem small {
+    display: block;
+    margin-bottom: 8px;
+}
+.cttItem button {
+    margin-right: 5px;
+    border: 3px solid #000;
+    border-radius: 7px;
+    background: white;
+    cursor: pointer;
+}
+.hide {
+    display: none !important;
+}
+body.dark-mode {
+    background: #000;
+    color: #fff;
+}
+body.dark-mode .dashboard-card,
+body.dark-mode #changeMode,
+body.dark-mode #sDIV input,
+body.dark-mode .tugas-controls input,
+body.dark-mode .tugas-controls button,
+body.dark-mode .list-tugas,
+body.dark-mode .list-tugas button,
+body.dark-mode #catatanSection #noteInput,
+body.dark-mode .note-button,
+body.dark-mode .cttItem,
+body.dark-mode .cttItem button,
+body.dark-mode input,
+body.dark-mode button,
+body.dark-mode p {
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+}
+body.dark-mode .header-bar {
+    border-color: #fff;
+}
+body.dark-mode #con-cuaca {
+    border: 3px solid #fff;
+    background: #111;
+}
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+@media (max-width: 800px) {
+    .widget-row,
+    .main-row {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #sDIV {
+        width: 55%;
+    }
+    .header-bar h1 {
+        font-size: 26px;
+    }
+}
